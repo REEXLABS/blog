@@ -1,8 +1,8 @@
 import rss from '@astrojs/rss';
 
 export const get = () => rss({
-  title: 'Astro Basic Blog Template',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  site: import.meta.env.SITE,
+  title: 'REEX Labs',
+  description: 'REEX Labs is a Research and Development company focused on building software that empower developers to build apps faster and with a better experience',
+  site: "https://blog.reexlabs.com",
   items: import.meta.glob('./posts/**.mdx'),
 });

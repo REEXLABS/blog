@@ -2,7 +2,6 @@
 import Layout from "@layouts/Layout.astro";
 import BlogCard from "@components/BlogCard.astro";
 import Subscribe from "@components/Subscribe.astro";
-import { Icon } from "astro-icon";
 
 interface Frontmatter {
   title: string;
@@ -11,8 +10,8 @@ interface Frontmatter {
 }
 
 const metadata = {
-  title: "Astro Basic Blog Template",
-  description: "This is a blog template made with Astro and Tailwind. Made by Lance Ross",
+  title: "REEX Labs - Bringing Ideas To Life",
+  description: "REEX Labs is a Research and Development company focused on building software that empower developers to build apps faster and with a better experience",
 };
 
 let blogs = await Astro.glob<Frontmatter>("./posts/*.mdx");
@@ -21,21 +20,16 @@ blogs = blogs.sort((a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Dat
 
 <Layout {...metadata}>
   <section class="flex flex-col sm:flex-row justify-evenly items-center py-14">
-    <div class="w-32 m-5 md:m-10 my-10">
-      <Icon name="simple-icons:astro" class="w-32 overflow-hidden inline-flex" />
-    </div>
-    <header class="max-w-xl sm:order-first">
-      <h1 class="text-2xl sm:text-3xl font-bold mb-7 md:mb-5 text-center sm:text-left">Welcome to my Astro Blog Template</h1>
-      <p class="text-black dark:text-zinc-300 mb-5">I got bored and decided to create an Astro template from scratch. Hope you like it!</p>
+        <header class="max-w-xl sm:order-first">
+      <h1 class="text-2xl sm:text-3xl font-bold mb-7 md:mb-5 text-center sm:text-left">REEX Labs</h1>
+      <p class="text-black dark:text-zinc-300 mb-5">We are a team of passionate developers building software to empower our fellow developers to build better apps, faster and with a better experience</p>
       <p class="text-black dark:text-zinc-300">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, debitis minima! Illo esse quod enim id deleniti, veritatis magnam dolorum non accusantium quam et nemo dolorem
-        aspernatur eligendi quidem est.
+        This is our technical blog where we'll be sharing news ans insights about almost everything going on under the hood, hopefully we get to learn from each other. Visit our GitHub profile for more
       </p>
     </header>
   </section>
   <section class="py-14">
     <h1 class="text-2xl sm:text-3xl font-bold mb-5">Recent Posts</h1>
-    <p class="text-black dark:text-zinc-300 mb-2">Looking for all of my blog posts? Click the "posts" or the "Show more posts" link down below.</p>
     <ul class="flex flex-col justify-center py-5">
       {
         blogs.length > 1 &&
