@@ -16,7 +16,7 @@ const canonicalURL = new URL(Astro.url).href;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <title>{title}</title>
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="canonical" href={canonicalURL} />
@@ -32,8 +32,6 @@ const canonicalURL = new URL(Astro.url).href;
     <meta property="og:locale" content="en_US" />
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={canonicalURL} />
-    <meta name="twitter:site" content="@lancerossdev" />
-    <meta name="twitter:creator" content="@lancerossdev" />
     <meta property="twitter:title" content={title} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:image" content="/banner.png" />
