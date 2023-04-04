@@ -1,0 +1,42 @@
+---
+title: The REEX Stack
+pubDate: April 04, 2023
+description: A quick overview of the tools we use currently @ REEX Labs
+---
+
+Hi folks, welcome(back) on the REEX Blog, where we share pretty much everything about how things go in here. 
+I'm <a href="https://github.com/TheWisePigeon" target="_blank"> TheWisePigeon</a>, founder of <a href="https://reexlabs.com" target="_blank">REEX Labs</a>.
+
+In this post, I will be talking about tools we use to build our products, by tools I mean programming languages, frameworks, databases, hosting platforms...
+pretty much everything we use to build our apps from the ground up. So without further a do, let's get started
+
+## Languages
+When I started my software development journey myself, I was a huge fan of JavScript, and I loved it much enough to quickly realize how bad it was. Then I gladly made
+ the switch to TypeScript. From there I became obsessed with strongly typed languages, that led me into Rust, which is my favorite language by the way. At REEX, we use three languages:
+ - TypeScript
+ - Rust
+ - Svelte
+
+ This blog you are reading right now was built using Astro, which is also a fantastic framework, but apart from this, all our frontends are built with Sveltekit.
+
+### Why these three
+First of all because they are my personnal favorite languages to work with, and second is because they are pretty much the best you can find in their respective fields. If you are writting apps that run
+ on a JavaScript runtime in 2023 and still using JavaScript, it's safe to say you are a wild human being, so we use TypeScript for everything, Sveltekit as a frontend framework, is fast due to it's architecture 
+ and is also pretty easy to learn(As someone who had to go through React and Vue), now Rust....is Rust, it's powerfull, reliable, blazingly fast, got these sweet types we love so much and we get to earn some memecred
+  by saying that we rewrote something in Rust, which we do very often.
+Now regarding the frameworks we use for our backend stuff, Elysiajs, Express and Axum are the ones we mainly use for now.
+
+### Runtime and where we deploy
+I used Node pretty much since I started learning JavaScript, so to kind of have some fresh air, right now our main JavaScript runtime is Bun.
+For deployments, we use Vercel for the frontends and some serverless functions running on Vercel's Rust or Node runtime. For our backend web APIs, we mainly deploy using Docker on Render, but we also sometimes use Northflank and Cyclic.
+
+## Databases
+I am a huge NoSQL fan, we recently switched from using MongoDB as our primary database to CassandraDB. We also use Postgres and only use MySQL on Planetscale. Our Mongo clusters are from Atlas or Railway, Postgres databases are hosted on Render or Railway. 
+And for Cassandra we use Astra. And of course we also use Redis.
+
+## The end
+That's pretty much it for now. We expect our stack to change as we build and experiment with our apps. I might have forgotten something, so follow us on our socials to be notified each time we post 
+
+<a target="_blank" href="https://github.com/reexlabs">GitHub</a> * <a target="_blank" href="https://linkedin.com/company/reex-labs">LinkedIn</a>
+
+Thanks for reading and I will see you in the next one.
