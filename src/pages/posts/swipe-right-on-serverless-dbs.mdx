@@ -1,0 +1,40 @@
+---
+title: Swipe right on Serverless databases
+pubDate: April 16, 2023
+description: Why we decided to use serverless databases for our upcoming product
+---
+
+## Introduction
+What is a database? Well, essentially it's just a software that is supposed to store data and let other softwares query and add to that data. That software is usually hosted on a 
+server and other applications make connections to that server in order to interact with the database using http or custom protocols. But, every time you run a software on a server,
+you have to think about the scalability of that software, what happens if suddenly your app gains a lot of traffic and the server doesn't have sufficient resources to handle it? what if
+ the storage capacity of your server is not sufficient anymore? How to move all that data to another bigger server without causing downtime and still keep data consistency? At REEX, as small
+  team, we don't want to be thinking about all that stuff, all we want is to write and read from our database. And after today's meeting, we decided that the best way for us to assure that we won't 
+  ever have to ask ourselves these dreadfull questions is to use **Serverless databases**. And in this post, I discuss why we think that way  
+
+## Concept
+A serverless database takes the features of a traditionnal database and combine them with the value and flexibility of serverless architecture. It takes away
+  the pain of managing the server where your database is hosted and scales automatically according to demand. Let's see some of the key elements of a serverless database more in depth:
+
+  - **Automated elastic scale**:
+With serverless databases, you won't be thinking about sharding or worry about whether or not your database can handle a sudden spike in queries. A serverless database scales automatically up and down 
+to meet with the demand, that means that if you're not querying your database, it will scale to 0 thus not using any computing but spinning up almost instantly when a query comes in, what is not the case with traditionnal databases.
+Serverless databases can also scale geographically, moving data dynamically around the world to reduce latency and give a fast experience for your users all over the world.
+
+- **Native resilience**:
+This feature takes away the dreadfull thought about your database server crashing or going offline for whatever reason. A serverless database is pretty much always up as it is not "hosted" somewhere on a server so even if an instance of the 
+database crashes during a request, it will still be able to spin up a new instance at the next query.
+
+- **Ease of use**:
+This is my favorite one. Working with a serverless database is just like working with an API. You can use HTTP requests to read and write your data, it takes away the pain of having to learn everything from a database you have never used before
+starting building features. Don't get me wrong, you still need to learn a good amount of things about a database in order to get the best out of it, but sometimes you just want to write and read stuf and using HTTP requests instead of learning a new
+query language is very helpful for productivity.
+
+- **Consumption based billing**:
+Usually with traditionnal databases, you are billed monthly, based on compute and storage. That means that even if you did not get any user in that month, you still have to pay for the compute time of the server. With Serverless databases, you are billed per query,
+which means you only pay for the resources you use, and it also allow you to set spend limits so you can prevent spending your startup whole budget on your database.
+
+These 4 elements are more than enough for you to start using serverless databases today, unless your business logic doesn't allow you to. As they are getting more and more popular, I am hyped to see how far we can get by using them in our products.
+
+
+That's it for this one. I hope you learn something new or at least had some fun while reading. Follow us on [GitHub](https://github.com/reexlabs) to be notified when we release our first tool and I will see you next week
