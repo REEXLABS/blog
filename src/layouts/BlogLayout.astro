@@ -82,6 +82,13 @@ const canonicalURL = new URL(Astro.url).href;
         </header>
         <article>
           <slot />
+          <script src="https://utteranc.es/client.js"
+                repo="TheWisePigeon/pigeonscript"
+                issue-term="pathname"
+                theme="github-dark"
+                crossorigin="anonymous"
+                async>
+        </script>
         </article>
         <footer class="flex flex-row justify-between mt-16 text-lg">
           <a href="/posts" class="dark:text-blue-400 text-blue-600">Back to posts</a>
